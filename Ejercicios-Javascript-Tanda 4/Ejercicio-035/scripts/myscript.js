@@ -37,7 +37,23 @@ function imc(peso, altura) {
 
 
 
-let peso = entradaNumero(`introduce tu peso`)
-let altura = entradaNumero(`introduce tu altura`)
+let peso = entradaNumero(`introduce tu peso en kilogramos`)
+let altura = entradaNumero(`introduce tu altura en metros`)
+let edad = entradaNumero(`introduce tu edad`)
+switch (true) {
+    case edad < 45 && imc(peso, altura) <= 22:
+        nivel = "BAJO"
+        break;
+    case edad >= 45 && imc(peso, altura) <= 22:
+        nivel = "MEDIO"
+        break;
+    case edad < 45 && imc(peso, altura) >= 22:
+        nivel = "MEDIO"
+        break;
+    case edad >= 45 && imc(peso, altura) >= 22:
+        nivel = "ALTO"
+        break;
 
-console.log(imc(peso, altura))
+}
+
+console.log(`tu índice de masa corporal es ${imc(peso, altura).toFixed(2)} tienes riesgo ${nivel} de enfermedad coronaria`)

@@ -12,3 +12,13 @@
 *   Nota: Emplear una funcion
 *
 ***************************************************************************************************************/
+function entradaNumero(mensaje) {
+    do {
+        numero = prompt(mensaje)
+    } while (isNaN(numero) || numero < 0)
+
+    return parseInt(numero)
+}
+
+let seg = entradaNumero(`introduce el numero de segundos`)
+
