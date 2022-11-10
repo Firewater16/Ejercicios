@@ -23,3 +23,21 @@
 *         Si nos vieramos en la necesidad de que una función devolviera varios datos ¿cómo podríamos hacerlo?
 *
 ***************************************************************************************************************/
+function entradaNumero(mensaje) {
+    do {
+        numero = prompt(mensaje)
+    } while (isNaN(numero))
+
+    return numero
+}
+
+function imc(peso, altura) {
+    return (peso / Math.pow(altura, 2))
+}
+
+
+
+let peso = entradaNumero(`introduce tu peso`)
+let altura = entradaNumero(`introduce tu altura`)
+
+console.log(imc(peso, altura))
